@@ -37,11 +37,11 @@ jobs:
     - name: Add MSBuild to PATH
       uses: microsoft/setup-msbuild@v1.1
 
-    - name: Build hudextension
-      working-directory: ${{env.GITHUB_WORKSPACE}}
-      # Add additional options to the MSBuild command line here (like platform or verbosity level).
-      # See https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference
-      run: msbuild ${{env.SOLUTION_FILE_PATH}}\hudextension /m /p:Configuration=${{env.BUILD_CONFIGURATION}} /p:Platform=${{env.PLATFORM_TARGET}} /p:PlatformToolset=${{env.PLATFORM_TOOLSET}} /p:WindowsTargetPlatformVersion=${{env.PLATFORM_VERSION}}
+    #- name: Build hudextension
+    #  working-directory: ${{env.GITHUB_WORKSPACE}}
+    #  # Add additional options to the MSBuild command line here (like platform or verbosity level).
+    #  # See https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference
+    #  run: msbuild ${{env.SOLUTION_FILE_PATH}}\hudextension /m /p:Configuration=${{env.BUILD_CONFIGURATION}} /p:Platform=${{env.PLATFORM_TARGET}} /p:PlatformToolset=${{env.PLATFORM_TOOLSET}} /p:WindowsTargetPlatformVersion=${{env.PLATFORM_VERSION}}
 
     - name: Build skee64
       working-directory: ${{env.GITHUB_WORKSPACE}}
