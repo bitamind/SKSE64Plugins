@@ -40,8 +40,8 @@ jobs:
     - name: download
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: |
-        curl -LO https://github.com/ianpatt/common/archive/refs/heads/master.zip
-        curl -LO https://github.com/ianpatt/skse64/archive/refs/tags/v2.2.6-gog.zip
+        curl -L -o common-master.zip https://github.com/ianpatt/common/archive/refs/heads/master.zip \
+                -o skse64-2.2.6-gog.zip https://github.com/ianpatt/skse64/archive/refs/tags/v2.2.6-gog.zip
         unzip common-master.zip
         unzip skse64-2.2.6-gog.zip
         mv -t . common-master/common skse64-2.2.6-gog/skse64{,_common}
