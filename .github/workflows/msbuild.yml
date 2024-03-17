@@ -41,10 +41,14 @@ jobs:
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: |
         curl -L -o common-master.zip https://github.com/ianpatt/common/archive/refs/heads/master.zip \
-                -o skse64-2.2.6-gog.zip https://github.com/ianpatt/skse64/archive/refs/tags/v2.2.6-gog.zip
+                -o skse64-2.2.6-gog.zip https://github.com/ianpatt/skse64/archive/refs/tags/v2.2.6-gog.zip \
+                -o spdlog-1.13.0.zip https://github.com/gabime/spdlog/archive/refs/tags/v1.13.0.zip \
+                -o DirectXTex-sept2023.zip https://github.com/microsoft/DirectXTex/archive/refs/tags/sept2023.zip
         unzip common-master.zip
         unzip skse64-2.2.6-gog.zip
-        mv -t . common-master/common skse64-2.2.6-gog/skse64{,_common}
+        unzip spdlog-1.13.0.zip
+        unzip DirectXTex-sept2023.zip
+        mv -t . common-master/common/ skse64-2.2.6-gog/skse64{,_common} spdlog-1.13.0/include/spdlog DirectXTex-sept2023/DirectXTex
       shell: bash
 
     #- name: Build hudextension
