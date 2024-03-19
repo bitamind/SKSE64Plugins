@@ -48,7 +48,7 @@ jobs:
         unzip skse64-2.2.6-gog.zip
         unzip spdlog-1.13.0.zip
         unzip DirectXTex-sept2023.zip
-        mv -t . common-master/common/ skse64-2.2.6-gog/skse64{,_common} spdlog-1.13.0/include/spdlog DirectXTex-sept2023/DirectXTex
+        mv -t . common-master/common/ skse64-2.2.6-gog/skse64{,_common} spdlog-1.13.0/include/spdlog DirectXTex-sept2023/DirectXTex/*
       shell: bash
 
     #- name: Build hudextension
